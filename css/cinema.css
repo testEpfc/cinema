@@ -32,3 +32,6 @@ header, footer {
     color: white;
     background-color: rgb(0, 71, 179);
 }
+.error {
+    color: red;
+}

@@ -16,15 +16,15 @@ and open the template in the editor.
     <main>
         <h1>Ici le main SIGN IN</h1>
         
-        
-        <form method="post" action="signinValidation.php">
+        <?php if(isset($_REQUEST['error'])){ echo "<h3 class='error'>The username and/or the password are wrond. Try again</h3>";} ?>
+        <form method="get" action="signinValidation.php">
             <table>
                 <tr>
                     <td>
                         Username:
                     </td>
                     <td>
-                        <input type="text" name="username" placeholder="username" value="toto">
+                        <input type="text" name="username" placeholder="username" value="">
                     </td>
                 </tr>
                 <tr>
@@ -32,7 +32,7 @@ and open the template in the editor.
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="password" placeholder="********" value="****">
+                        <input type="password" name="password" placeholder="********" value="">
                     </td>
                 </tr>
                 <tr>

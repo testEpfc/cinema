@@ -11,12 +11,20 @@ and open the template in the editor.
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
         <style>
-            ul {
+/*            ul {
                  list-style: none;
             }
             li {
                 display: inline-block;
+                float:left;
             }
+            a {
+            text-decoration: none;
+            display: inline-block;
+            display: block;
+            background-color: white;
+            padding: 10px;
+}*/
         </style>
     </head>
     <body>
@@ -26,13 +34,14 @@ and open the template in the editor.
         
         <ul>
             <li>
-                <button><a href="films.php"> films list </a></button>
+                <!--<button><a href="films.php"> films list </a></button>-->
+               <a href="films.php"> films list </a>
             </li>
             <li>
-                <button><a href="form.php"> add a film </a></button>
+                <a href="form.php"> add a film </a>
             </li>
             <li>
-                <button><a href="signup.php"> sign up </a></button>
+                <a href="signup.php"> sign up </a>
             </li>
         </ul>
         

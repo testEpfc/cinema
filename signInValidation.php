@@ -49,7 +49,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']))
 
 <html>
     <head>
-        <?php if($isEmpty){ echo '<meta http-equiv="refresh" content="0; url=signin.php" />' ; }?>
+        <?php if($isEmpty){ echo '<meta http-equiv="refresh" content="0; url=signin.php?error=1" />' ; }?>
         <meta charset="UTF-8">
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
@@ -58,7 +58,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']))
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main SIGN UP Validation</h1>
+        <h1>Ici le main SIGN IN Validation</h1>
         
         <h5><?php if($isEmpty){ echo $errMessage ;}   ?></h5>
         
