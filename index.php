@@ -32,7 +32,7 @@ and open the template in the editor.
     <main>
         <h1>Ici le main Index</h1>
         
-        <ul>
+        <ul style="list-style: none">
             <li>
                 <!--<button><a href="films.php"> films list </a></button>-->
                <a href="films.php"> films list </a>
