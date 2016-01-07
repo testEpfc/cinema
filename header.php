@@ -1,7 +1,9 @@
 <?php 
-$links = array('index.php','signin.php','signup.php','films.php');
+$links = array('index.php','signin.php','signup.php','filmsImage.php');
 $activeMark = '" class="active';
-for($i=0;$i<3;++$i )
+$linksSize = count($links);
+//for($i=0;$i<4;++$i )
+for($i=0;$i<$linksSize;++$i )
 {
     if("/cinema/".($links[$i]) == $_SERVER['PHP_SELF'])
 //    if($links[$i] == 'signup.php')

@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-janv.-2016, 20:10:09
+    Author     : 1009qugeorge
+*/
+
+.resultList tr:nth-child(even) td{
+    float: left;
+}
+.resultList tr:nth-child(odd) td{
+    float: right;
+}
+.resultList img {
+    height: 100px;
+}
+.resultList, .resultList tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.resultList td {
+    padding: 10px;
+}
+/*.resultList td{
+    width: 1400px;
+}*/
