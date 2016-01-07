@@ -7,24 +7,24 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>signup</title>
+        <title>sign in</title>
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main SIGN UP</h1>
+        <h1>Ici le main SIGN IN</h1>
         
         
-        <form method="post" action="signupValidation.php">
+        <form method="post" action="signinValidation.php">
             <table>
                 <tr>
                     <td>
                         Username:
                     </td>
                     <td>
-                        <input type="text" name="username" placeholder="username">
+                        <input type="text" name="username" placeholder="username" value="toto">
                     </td>
                 </tr>
                 <tr>
@@ -32,15 +32,7 @@ and open the template in the editor.
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="password" placeholder="********">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password:
-                    </td>
-                    <td>
-                        <input type="email" name="email" placeholder="address@domain.com">
+                        <input type="password" name="password" placeholder="********" value="****">
                     </td>
                 </tr>
                 <tr>

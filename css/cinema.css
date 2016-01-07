@@ -7,4 +7,28 @@ and open the template in the editor.
     Created on : 17-déc.-2015, 21:46:15
     Author     : jedepaepe
 */
-
+* {
+    //box-sizing: border-box;
+}
+body {
+    background-color: rgb(180,180,220);
+    background-color: rgb(0, 204, 255);
+    color: rgb(0,0,200);
+    color: rgb(0, 71, 179);
+}
+main {
+    /*width: 80%;*/
+    margin: auto;
+    text-align: center;
+}
+table {
+    margin: auto;
+    /*text-align: center;*/
+}
+header, footer {
+    text-align: center;
+}            
+.responsiveTable {
+    color: white;
+    background-color: rgb(0, 71, 179);
+}
