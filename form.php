@@ -36,6 +36,15 @@ and open the template in the editor.
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        Description:
+                    </td>
+                    <td>
+                        <input type="text" name="description" required placeholder="the description" value="">
+                    </td>
+                </tr>
+                <tr>
+                <tr>
                     <td colspan="2" style="text-align: center;">
                         <input type="submit" value="submit"></input>
                     </td>

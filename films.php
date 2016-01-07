@@ -9,15 +9,16 @@ and open the template in the editor.
 include "DBInfo.php";
 
 $porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
-if(isset($_REQUEST['titre']) && isset($_REQUEST['date']))
+if(isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['description']))
 {
     $titre = $_REQUEST['titre'];
     $date = $_REQUEST['date'];
+    $description = $_REQUEST['description'];
 
 //$titre = filter_var($titre, FILTER_SANITIZE_STRING);
 //$date = filter_var($date, FILTER_SANITIZE_STRING);
 
-$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`) VALUES (NULL, \"$titre\", \"$date\")");
+$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`) VALUES (NULL, \"$titre\", \"$date\", \"$description\")");
 }
 $reponse = $porteMysql->query("SELECT * FROM `$tableName`");
 $reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");

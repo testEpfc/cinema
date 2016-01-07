@@ -20,7 +20,7 @@ if(isset($_REQUEST['search']) && !empty($_REQUEST['search']))
     $search = $_REQUEST['search'];
 
 //    $reponse = $porteMysql->query("SELECT `titre`, `annee` FROM `film` WHERE titre=\"$search\"");
-    $reponse = $porteMysql->query("SELECT `titre`, `annee` FROM `film` WHERE titre=\"$search\" OR annee=\"$search\"");
+    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre=\"$search\" OR annee=\"$search\"");
     //$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`) VALUES (NULL, \"$titre\", \"$date\")");
 
     //$reponse = $porteMysql->query("SELECT * FROM `$tableName`");
@@ -45,7 +45,7 @@ if(isset($_REQUEST['search']) && !empty($_REQUEST['search']))
 }
 if($isEmpty)  
 {
-    $reponse = $porteMysql->query("SELECT `titre`, `annee` FROM `film`");
+    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film`");
     $all = $reponse->fetchAll();
     $isEmpty = 1;
     $row = sizeof($all,0);
@@ -98,11 +98,12 @@ if($isEmpty)
                 <td>
                     <!--<li>-->
                         <?php // if(!$isEmpty){echo $all[0]['titre'];} ?>
-                        <?php echo "<h3>".$all[$i]['titre']."</h3>"; ?>
+                        <?php echo "<h3>".$all[$i]['titre'].""; ?>
                         <?php // if(!$isEmpty){echo $value;} ?>
                     <!--</li>-->
                     <!--<li>-->
-                        <?php echo "<article>".$all[$i]['annee']."</article>"; ?>
+                        <?php echo " (".$all[$i]['annee'].") </h3>"; ?>
+                        <?php echo "<article>".$all[$i]['description']."</article>"; ?>
                     <!--</li>-->
                 </td>
             </tr>
