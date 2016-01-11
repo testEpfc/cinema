@@ -8,5 +8,9 @@
 
 
 $DBName = "cinema";
-$tableName = "film";
-$logTableName = "loginfo";
+//$tableName = "film";
+//$logTableName = "loginfo";
+$tableNames = Array("film","logInfo");
+$serverName = "localhost";
+$userName = "root";
+$password = "";
