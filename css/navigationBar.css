@@ -15,8 +15,10 @@ ul.navbar  {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    /*background-color: #333;*/
     background-color: rgb(0, 71, 179);
+    /*box-shadow: 0px 2px 4px black;*/
+    box-shadow: 0px 3px 7px black;
 }
 
 .navbar li {
@@ -32,11 +34,16 @@ ul.navbar  {
 }
 
 .navbar li a:hover:not(.active) {
-    background-color: #111;
+    /*background-color: #111;*/
     background-color: rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 4px black;
 }
 
 .navbar .active {
-    background-color: #4CAF50;
+    /*background-color: #4CAF50;*/
     background-color: rgba(255,255,255,0.2);
+    box-shadow: 0px 2px 4px black inset;
+}
+.navbar .nav-right {
+    float: right;
 }

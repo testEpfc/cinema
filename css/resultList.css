@@ -8,14 +8,33 @@ and open the template in the editor.
     Author     : 1009qugeorge
 */
 
-.resultList tr:nth-child(even) td{
+/*.resultList tr:nth-child(even) td{
+    float: left;
+}*/
+/*.resultList tr:nth-child(even) td * {
+    float: left;
+}*/
+/*.resultList tr:nth-child(even) td ul, .resultList tr:nth-child(even) td img {
+    float: left;
+}*/
+.resultList tr:nth-child(even) td img {
     float: left;
 }
-.resultList tr:nth-child(odd) td{
+/*.resultList tr:nth-child(odd) td{
+    float: right;
+}*/
+/*.resultList tr:nth-child(odd) td * {
+    float: right;
+}*/
+/*.resultList tr:nth-child(odd) td ul, .resultList tr:nth-child(odd) td img {
+    float: right;
+}*/
+.resultList tr:nth-child(odd) td img {
     float: right;
 }
 .resultList img {
     height: 100px;
+    padding: 10px 20px 5px 20px;
 }
 .resultList, .resultList tr {
     border: 1px solid black;
@@ -26,4 +45,17 @@ and open the template in the editor.
 }
 /*.resultList td{
     width: 1400px;
+}*/
+.resultList tr{
+    /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+    box-shadow:  -4px 2px 8px -2px black, 4px 2px 8px -2px black;
+/*    box-shadow:  -4px 2px 8px -18px black, 4px 2px 8px -18px black,
+                 -18px 4px 8px -4px black, 18px 4px 8px -4px black;*/
+    /*box-shadow:  0px 6px 4px -0px black;*/
+}
+.resultList {
+    /*box-shadow:  0px 10px 6px 1px black;*/
+}
+/*.clear {
+    clear: both;
 }*/

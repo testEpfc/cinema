@@ -20,8 +20,10 @@ if(isset($_REQUEST['search']) && !empty($_REQUEST['search']))
     $search = $_REQUEST['search'];
 
 //    $reponse = $porteMysql->query("SELECT `titre`, `annee` FROM `film` WHERE titre=\"$search\"");
-    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre=\"$search\" OR annee=\"$search\"");
-    //$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`) VALUES (NULL, \"$titre\", \"$date\")");
+//    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre=\"$search\" OR annee=\"$search\"");
+    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre LIKE \"%$search%\" OR annee LIKE \"%$search%\"");
+    
+//$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`) VALUES (NULL, \"$titre\", \"$date\")");
 
     //$reponse = $porteMysql->query("SELECT * FROM `$tableName`");
     //$reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
@@ -70,6 +72,8 @@ if($isEmpty)
         <?php include './header.php';?>
     <main>
         <h1>Ici le main FilmsImage </h1>
+        <br>
+        <!--<br>-->
         
         <?php // if($isEmpty){echo $all[0]['annee'];} ?>
         
@@ -94,16 +98,25 @@ if($isEmpty)
             <tr>
                 <td>
                     <img src="DbAffiches/Affiche1.jpg" alt=""/>
-                </td>
-                <td>
+                <!--</td>-->
+                <!--<td>-->
                     <!--<li>-->
                         <?php // if(!$isEmpty){echo $all[0]['titre'];} ?>
+                    
                         <?php echo "<h3>".$all[$i]['titre'].""; ?>
+                        <?php // echo "<ul class='clear'><li><h3>".$all[$i]['titre'].""; ?>
+                        <?php // echo "<ul><li><h3>".$all[$i]['titre'].""; ?>
                         <?php // if(!$isEmpty){echo $value;} ?>
                     <!--</li>-->
                     <!--<li>-->
                         <?php echo " (".$all[$i]['annee'].") </h3>"; ?>
-                        <?php echo "<article>".$all[$i]['description']."</article>"; ?>
+                        <?php // echo " (".$all[$i]['annee'].") </h3></li>"; ?>
+                        <?php // echo " (".$all[$i]['annee'].") </h3><div class='clear'>"; ?>
+                        <?php // echo "<article>".$all[$i]['description']."</article>"; ?>
+                        <?php // echo "<p>".$all[$i]['description']."</p>"; ?>
+                        <?php // echo "<span>".$all[$i]['description']."</span>"; ?>
+                        <?php // echo "<li>".$all[$i]['description']."</li></ul>"; ?>
+                        <?php echo $all[$i]['description']; ?>
                     <!--</li>-->
                 </td>
             </tr>

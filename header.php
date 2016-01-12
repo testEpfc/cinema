@@ -15,10 +15,11 @@ $j=0;
 ?>
 <header>
     <ul class="navbar">
-        <li><a href="<?php echo $links[$j++] ?>"> menu </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > connect </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > nouveau compte </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > films </a></li>
+        <li><a href="<?php echo $links[$j++] ?>"> Menu </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Connect </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Nouveau Compte </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>
+        <li class="nav-right"><a href=""> Search </a></li>
     </ul>
-    <hr>
+    <!--<hr>-->
 </header>
