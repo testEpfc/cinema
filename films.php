@@ -4,30 +4,110 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+
+
 <?php 
 
+
+
 include "DBInfo.php";
+try {
+    //$porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
+    $porteMysql = new PDO("mysql:host=$serverName;dbname=$DBName;charset=utf8", $userName, $password);
+    //$porteMysql = new PDO("mysql:host=$serverName", $userName, $password);
+    $porteMysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    if(isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['description']))
+    {
+        $titre = $_REQUEST['titre'];
+        $date = $_REQUEST['date'];
+        $description = $_REQUEST['description'];
 
-$porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
-if(isset($_REQUEST['titre']) && isset($_REQUEST['date']) && isset($_REQUEST['description']))
-{
-    $titre = $_REQUEST['titre'];
-    $date = $_REQUEST['date'];
-    $description = $_REQUEST['description'];
+    //$titre = filter_var($titre, FILTER_SANITIZE_STRING);
+    //$date = filter_var($date, FILTER_SANITIZE_STRING);
 
-//$titre = filter_var($titre, FILTER_SANITIZE_STRING);
-//$date = filter_var($date, FILTER_SANITIZE_STRING);
+    $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`) VALUES (NULL, \"$titre\", \"$date\", \"$description\")");
+    }
+    
+    
+    
+    
+//    $reponse = $porteMysql->query("SELECT * FROM `$tableName`");
+//    $reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
 
-$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`) VALUES (NULL, \"$titre\", \"$date\", \"$description\")");
+//    $all = $reponse->fetchAll();
+//    $allTitre = $reponseTitre->fetchAll();
+//    $row = sizeof($all,0);
+//    $column = sizeof($allTitre,0);
+    ///////////
+
+
+    //include "DBInfo.php";
+
+//    $porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
+    $isList = 0;
+    $isEmpty = 1;
+    $badSearch = 0;
+    $search = '';
+    $badSearchMessage = "<h3 class='error'>The film you are looking for is not in our database</h3>";
+    if(isset($_REQUEST['search']) && !empty($_REQUEST['search']))
+    {
+        $search = $_REQUEST['search'];
+
+    //    $reponse = $porteMysql->query("SELECT `titre`, `annee` FROM `film` WHERE titre=\"$search\"");
+    //    $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre=\"$search\" OR annee=\"$search\"");
+//        $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film` WHERE titre LIKE \"%$search%\" OR annee LIKE \"%$search%\"");
+        $reponse = $porteMysql->query("SELECT * FROM `film` WHERE titre LIKE \"%$search%\" OR annee LIKE \"%$search%\"");
+
+    //$porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`) VALUES (NULL, \"$titre\", \"$date\")");
+
+        //$reponse = $porteMysql->query("SELECT * FROM `$tableName`");
+        //$reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
+        //
+        $all = $reponse->fetchAll();
+        //$allTitre = $reponseTitre->fetchAll();
+        //$row = sizeof($all,0);
+        //$column = sizeof($allTitre,0);
+
+        $row = sizeof($all,0);
+        if($row ==0)
+        {
+            $isEmpty = 1;
+            $badSearch = 1;
+        }
+        else
+        {
+            $isEmpty = 0;
+            $badSearch = 0;
+        }
+    }
+    if($isEmpty)  
+    {
+//        $reponse = $porteMysql->query("SELECT `titre`, `annee`, `description` FROM `film`");
+        $reponse = $porteMysql->query("SELECT * FROM `film`");
+        $all = $reponse->fetchAll();
+        $isEmpty = 1;
+        $row = sizeof($all,0);
+    }
+    $reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
+    $allTitre = $reponseTitre->fetchAll();
+    if(isset($_REQUEST['isList']) && !empty($_REQUEST['isList']) && $_REQUEST['isList'])
+    {
+        $isList = 1;
+    }
+    
 }
-$reponse = $porteMysql->query("SELECT * FROM `$tableName`");
-$reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
+catch(PDOException $e)
+{
+    echo $sql . "<br>" . $e->getMessage();
+}
 
-$all = $reponse->fetchAll();
-$allTitre = $reponseTitre->fetchAll();
-$row = sizeof($all,0);
-$column = sizeof($allTitre,0);
+$porteMysql = null;
 ?>
+
+
+
 
 
 <html>
@@ -35,54 +115,83 @@ $column = sizeof($allTitre,0);
         <meta charset="UTF-8">
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
+        <link href="css/resultList.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>
-        
-        <title>film</title>
+        <title> FilmsImage </title>
+        <style>
+        </style>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main FILMS</h1>
+        <h1>Ici le main FilmsImage </h1>
         <br>
-        <a href="filmsImage.php"> <button> Image </button></a>
-        <br>
-        <br>
+        <!--<br>-->
         
+        <?php // if($isEmpty){echo $all[0]['annee'];} ?>
         
-        
-        
-        
-        
-    <!--<li> <?php // echo "row = ".$row = sizeof($all,0) ?> </li>-->
-    <!--<li> <?php // echo "column = ".$column = sizeof($allTitre,0) ?> </li>-->
+        <form method="get">
             
-<!--    <br>
-    <br>
-    <br>
-    <br>-->
+            <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px">
+            <input type="hidden" name="isList" value="<?php echo $isList; ?>">
+            <input type="submit" value="Search"><br><br><br>
             
-        <table class="responsiveTable">
-            <tr>
-                <?php for($j=0; $j<$column;++$j){ ?>
-                    <th> <?php echo $allTitre[$j][0] ?> </th>
-                <?php } ?>
-            </tr>
-            <?php for($i=0; $i<$row;++$i){ ?>
-            <tr>
-                <?php for($j=0; $j<$column;++$j){ ?>
-                    <td> <?php echo $all[$i][$j] ?> </th>
-                <?php } ?>
-            </tr>
-            <?php } ?>
-        </table>
+        </form>
+                       
+         <?php if($badSearch){echo $badSearchMessage;} ?>
         <br>
-            
+        <ul class="navbar miniNavbar">
+        <!--<div style="width: 10px;">dsqf</div>-->
+        <!--<li style="width: 50px;height:1px;"></li>-->
+        <!--<li style="margin: auto;height:1px;"></li>-->
+        <li>
+        <?php
+        if($isList)
+        {
+            $listClass = ' class="active"';
+            $imageClass = '';
+        }
+        else
+        {
+            $listClass = '';
+            $imageClass = ' class="active"';
+        }
+        ?>
+        <?php if($isEmpty)
+        {
+//            echo '<a href="films.php?isList=1"> <button> List </button></a></li><li>';
+//            echo '<a href="films.php?isList=0"> <button> Image </button></a>';
+            echo '<a href="films.php?isList=1"'.$listClass.'> List </a></li><li>';
+            echo '<a href="films.php?isList=0"'.$imageClass.'> Image </a>';
+        }
+        else
+        {
+//            echo '<a href="films.php?isList=1&search='.$search.'"> <button> List </button></a>';
+//            echo '<a href="films.php?isList=0&search='.$search.'"> <button> Image </button></a>';
+            echo '<a href="films.php?isList=1&search='.$search.'"'.$listClass.'> List </a></li><li>';
+            echo '<a href="films.php?isList=0&search='.$search.'"'.$imageClass.'> Image </a>';
+        }
+        ?>
+        </li></ul>
+        <!--<input type="button" name=""-->
+<!--        <br>
+        <br>-->
+        
+        <?php 
+        if($isList)
+        {
+            include 'responsiveTableFiller.php';
+            responsiveTableFiller($all,$allTitre);
+        }
+        else 
+        {
+            include 'resultListFiller.php';
+            resultListFiller($all);
+        }
+        ?>
+        
+        <br>
         <a href="form.php"> <button> add a film </button></a>
-          
-    <?php include 'responsiveTableJS.php'; ?>
-        
-        
-        
         
         
     </main>

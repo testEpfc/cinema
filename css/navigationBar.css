@@ -47,3 +47,18 @@ ul.navbar  {
 .navbar .nav-right {
     float: right;
 }
+.navbar.miniNavbar {
+    /*display: inline-block;*/
+    /*display: block;*/
+    /*width: 20%;*/
+    /*padding: 0px;*/
+    margin:auto;
+    /*margin-bottom: 0px;*/
+    box-shadow: none;
+    /*box-shadow: 0px 2px 4px 10px black;*/
+}
+/*.navbar.miniNavbar .active {
+    background-color: #4CAF50;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0px 2px 4px black;*/
+/*}*/

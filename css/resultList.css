@@ -37,7 +37,7 @@ and open the template in the editor.
     padding: 10px 20px 5px 20px;
 }
 .resultList, .resultList tr {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     border-collapse: collapse;
 }
 .resultList td {
@@ -48,10 +48,10 @@ and open the template in the editor.
 }*/
 .resultList tr{
     /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
-    box-shadow:  -4px 2px 8px -2px black, 4px 2px 8px -2px black;
+    /*box-shadow:  -4px 2px 8px -2px black, 4px 2px 8px -2px black;*/
 /*    box-shadow:  -4px 2px 8px -18px black, 4px 2px 8px -18px black,
                  -18px 4px 8px -4px black, 18px 4px 8px -4px black;*/
-    /*box-shadow:  0px 6px 4px -0px black;*/
+    box-shadow:  0px 4px 4px -1px black;
 }
 .resultList {
     /*box-shadow:  0px 10px 6px 1px black;*/

@@ -1,5 +1,5 @@
 <?php 
-$links = array('index.php','signin.php','signup.php','filmsImage.php');
+$links = array('index.php','signin.php','signup.php','films.php');
 $activeMark = '" class="active';
 $linksSize = count($links);
 //for($i=0;$i<4;++$i )

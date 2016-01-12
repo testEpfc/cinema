@@ -12,7 +12,7 @@ and open the template in the editor.
     margin: 0px;
     /*padding: 0px;*/
     font-family: "Segoe UI",Arial,sans-serif;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 html {
     /*height: 100%;*/
@@ -76,13 +76,23 @@ footer {
     color: white;
     background-color: rgb(0, 71, 179);
 }
-table.resultList {
-    /*max-width: 800px;*/
-    max-width: 800px;
-    /*width: 400px;*/
-    /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
-    /*box-shadow: 0px 2px 4px black;*/
+table.resultList, .navbar.miniNavbar, table.responsiveTable {
+        /*max-width: 800px;*/
+        width: 95%;
+        /*width: 400px;*/
+        /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+        /*box-shadow: 0px 2px 4px black;*/
 }
+@media (min-width: 850px){
+    table.resultList, .navbar.miniNavbar, table.responsiveTable {
+        /*max-width: 800px;*/
+        width: 800px;
+        /*width: 400px;*/
+        /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+        /*box-shadow: 0px 2px 4px black;*/
+    }
+}
+
 .error {
     color: red;
 }
