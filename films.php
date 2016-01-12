@@ -117,26 +117,26 @@ $porteMysql = null;
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
         <link href="css/resultList.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>
-        <title> FilmsImage </title>
+        <title> Films List </title>
         <style>
         </style>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main FilmsImage </h1>
+        <h1> Films List </h1>
         <br>
         <!--<br>-->
         
         <?php // if($isEmpty){echo $all[0]['annee'];} ?>
         
-        <form method="get">
+<!--        <form method="get">
             
-            <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px">
-            <input type="hidden" name="isList" value="<?php echo $isList; ?>">
+            <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px" autofocus="autofocus">
+            <input type="hidden" name="isList" value="<?php // echo $isList; ?>">
             <input type="submit" value="Search"><br><br><br>
             
-        </form>
+        </form>-->
                        
          <?php if($badSearch){echo $badSearchMessage;} ?>
         <br>
