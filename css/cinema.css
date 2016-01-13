@@ -69,7 +69,9 @@ header, footer {
     box-shadow: 0px -7px 10px -5px black inset;
     position: fixed;
     top:0;
-    z-index: -5;
+    /*z-index: -1;*/
+    /*z-index: 50;*/
+    z-index: 0;
     width:100%;
 }
 .bannerPlaceHolder {
@@ -78,6 +80,8 @@ header, footer {
     /*height:220px;*/
     height:170px;
     width:100%;
+    z-index: -30;
+    /*z-index: 30;*/
 }
 .banner img {
     /*height:350px;*/
@@ -139,6 +143,8 @@ main {
     background-color: rgba(255,255,255,1);
     background-color: white;
     box-shadow: 0 0 6px 3px black;
+    position: relative;
+    z-index: 10;
 }
 /*main < {
 }*/
