@@ -7,14 +7,14 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>signup</title>
+        <title>Sign Up</title>
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main SIGN UP</h1>
+        <h1>Sign Up</h1>
         
         
         <form method="post" action="signupValidation.php">
@@ -37,7 +37,7 @@ and open the template in the editor.
                 </tr>
                 <tr>
                     <td>
-                        Password:
+                        Email:
                     </td>
                     <td>
                         <input type="email" name="email" placeholder="address@domain.com">

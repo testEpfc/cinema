@@ -52,10 +52,13 @@ and open the template in the editor.
     /*box-shadow:  -4px 2px 8px -2px black, 4px 2px 8px -2px black;*/
 /*    box-shadow:  -4px 2px 8px -18px black, 4px 2px 8px -18px black,
                  -18px 4px 8px -4px black, 18px 4px 8px -4px black;*/
-    box-shadow:  0px 4px 4px -1px black;
+    /*box-shadow:  0px 4px 4px -1px black;*/
+    /*box-shadow:  0px 6px 2px 4px black;*/
+    box-shadow:  0px 6px 9px 4px rgba(0,0,0,0.7);
 }
 .resultList {   
     /*box-shadow:  0px 10px 6px 1px black;*/
+    /*box-shadow:  0px 0px 4px 1px black;*/
 }
 /*.clear {
     clear: both;

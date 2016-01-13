@@ -15,13 +15,15 @@ for($i=0;$i<$linksSize;++$i )
 $j=0;
 ?>
 <header>
-    <ul class="navbar">
-        <li><a href="<?php echo $links[$j++] ?>"> Menu </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > Connect </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > Nouveau Compte </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>
+<!--    <ul class="navbar">
+        <li><a href="<?php // echo $links[$j++] ?>"> Menu </a></li>
+        <li><a href="<?php // echo $links[$j++] ?>" > Connect </a></li>
+        <li><a href="<?php // echo $links[$j++] ?>" > Nouveau Compte </a></li>
+        <li><a href="<?php // echo $links[$j++] ?>" > Films </a></li>
         <li class="nav-right"><a href=""> Search </a></li>
-    </ul>
+    </ul>-->
+    
+    
     <!--<hr>-->
     <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg ">-->
     <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg " style="height:200px;">-->
@@ -39,12 +41,13 @@ $j=0;
         <br>
         
         <form method="get" action="films.php">
-            
+            <div class="searchBarSizer">
             <!--<input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px" autofocus="autofocus">-->
             <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px">
             <!--<input type="hidden" name="isList" value="<?php // echo $isList; ?>">-->
             <input type="hidden" name="isList" value="<?php if(isset($isList) && !empty($isList)){echo $isList;}else{echo 0;} ?>">
             <!--<input type="hidden" name="isList" value="0">-->
+            </div>
             <input type="submit" value="Search">
             <!--<br><br><br>-->
             
@@ -52,4 +55,11 @@ $j=0;
         </div>
     </div>
     
+    <ul class="navbar">
+        <li><a href="<?php echo $links[$j++] ?>"> Menu </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Connect </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Nouveau Compte </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>
+        <li class="nav-right"><a href=""> Search </a></li>
+    </ul>
 </header>

@@ -1,28 +1,30 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 07-janv.-2016, 2:38:28
-    Author     : queni
-*/
-
-
 /*.navbar ul {*/
 ul.navbar  {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    /*max-height: 51px;*/
+    /*overflowhidden fixes bugs for no reason....*/
     overflow: hidden;
     /*background-color: #333;*/
     background-color: rgb(0, 71, 179);
     /*box-shadow: 0px 2px 4px black;*/
     box-shadow: 0px 3px 7px black;
 }
-
+/*from cinema.css*/
+/*.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    position: static;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}     */
 .navbar li {
-    float: left;
+    /*float: left;*/
+    /*float: none;*/
 }
 
 .navbar li a {
@@ -45,9 +47,17 @@ ul.navbar  {
     box-shadow: 0px 2px 4px black inset;
 }
 .navbar .nav-right {
+    /*float: right;*/
+    /*float: none;*/
+}
+.miniNavbar .nav-right {
     float: right;
 }
+.miniNavbar li{
+    float: left;
+}
 .navbar.miniNavbar {
+    /*float: left;*/
     /*display: inline-block;*/
     /*display: block;*/
     /*width: 20%;*/
@@ -57,8 +67,32 @@ ul.navbar  {
     box-shadow: none;
     /*box-shadow: 0px 2px 4px 10px black;*/
 }
-/*.navbar.miniNavbar .active {
-    background-color: #4CAF50;
-    background-color: rgba(255,255,255,0.2);
-    box-shadow: 0px 2px 4px black;*/
-/*}*/
+.navbar.miniNavbar .active {
+/*    background-color: #4CAF50;
+    background-color: rgba(255,255,255,0.2);*/
+    box-shadow: 0px 0px 6px 1px black inset;
+    /*box-shadow: none;*/
+}
+
+@media (min-width: 400px){
+    .navbar:not(.miniNavbar) {
+    /*.navbar {*/
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 100;
+    }
+    /*.miniNavbar {*/
+/*    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 100;
+    }*/
+    .navbar .nav-right {
+        float: right;
+    }
+    .navbar li {
+        float: left;
+    }
+}

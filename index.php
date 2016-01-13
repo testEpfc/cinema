@@ -29,8 +29,15 @@ and open the template in the editor.
     </head>
     <body>
         <?php include './header.php';?>
+        <?php if(isset($_REQUEST['welcome']) && !empty($_REQUEST['welcome']) && isset($_REQUEST['username']) && !empty($_REQUEST['username']))
+        { ?>
+        <div class="goodFeedBack">
+            Welcome to Cinema <?php echo $_REQUEST['username'] ?>
+        </div>
+        <?php } ?>
     <main>
-        <h1>Ici le main Index</h1>
+        
+        <h1>Index</h1>
         
         <ul style="list-style: none">
             <li>
