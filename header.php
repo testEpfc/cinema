@@ -1,6 +1,6 @@
 <?php 
 $srcImage = "ressources/1.jpg ";
-$links = array('index.php','signin.php','signup.php','films.php');
+$links = array('index.php','signin.php','signup.php','films.php','form.php');
 $activeMark = '" class="active';
 $linksSize = count($links);
 //for($i=0;$i<4;++$i )
@@ -15,24 +15,6 @@ for($i=0;$i<$linksSize;++$i )
 $j=0;
 ?>
 <header>
-<!--    <ul class="navbar">
-        <li><a href="<?php // echo $links[$j++] ?>"> Menu </a></li>
-        <li><a href="<?php // echo $links[$j++] ?>" > Connect </a></li>
-        <li><a href="<?php // echo $links[$j++] ?>" > Nouveau Compte </a></li>
-        <li><a href="<?php // echo $links[$j++] ?>" > Films </a></li>
-        <li class="nav-right"><a href=""> Search </a></li>
-    </ul>-->
-    
-    
-    <!--<hr>-->
-    <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg ">-->
-    <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg " style="height:200px;">-->
-    <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg " style="height:600px;">-->
-    <!--<img src="ressources/Awesome-Undersea-Wallpaper-High-Resolution-.jpg " style="max-width:800px;">-->
-    <!--<img src="ressources/1.jpg " style="max-width:800px;">-->
-    <!--<img src="ressources/1.jpg " style="height:200px;width:800px;">-->
-    <!--<img src="ressources/1.jpg " style="height:400px;width:100%;">-->
-    <!--<img src="ressources/1.jpg ">-->
     
     <div class="banner">
         <img src="<?php echo $srcImage; ?>">
@@ -57,9 +39,11 @@ $j=0;
     
     <ul class="navbar">
         <li><a href="<?php echo $links[$j++] ?>"> Menu </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > Connect </a></li>
-        <li><a href="<?php echo $links[$j++] ?>" > Nouveau Compte </a></li>
+        <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign In </a></li>
+        <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign Up </a></li>
         <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>
-        <li class="nav-right"><a href=""> Search </a></li>
+        <li><a href="<?php echo $links[$j++] ?>" > Add Films </a></li>
+        <!--<li class="nav-right"><a href=""> Search </a></li>-->
+        <li><a href=""> Search </a></li>
     </ul>
 </header>
