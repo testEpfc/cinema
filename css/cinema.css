@@ -60,8 +60,9 @@ header, footer {
     /*height:220px;*/
     height:170px;
     /*min-height:150px;*/
-    box-shadow: 0px -6px 10px -2px black inset;
     /*box-shadow: 0px -3px 5px -2px black inset;*/
+    /*box-shadow: 0px -6px 10px -2px black inset;*/
+    box-shadow: 0px -7px 10px -5px black inset;
 }
 .banner img {
     /*height:350px;*/
@@ -138,6 +139,32 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable {
         /*box-shadow: 0px 2px 4px black;*/
     }
 }
+.formTable tr td {
+    /*text-align: right;*/
+    text-align: left;
+}
+.formTable tr td textarea{
+    width : 300px;
+    height : 100px;
+}
+.formTable tr td input:not([type=submit]) {
+/*.formTable tr td input:not(:last-child) {*/
+/*.formTable tr td:not(:last-child) input {*/
+/*.formTable tr td:not(:last-child) {*/
+/*.formTable tr td input:last-child {*/
+/*input:not([type=submit]) {*/
+/*input{*/
+/*.formTable tr td input[type!=submit] {*/
+    width : 300px;
+}
+/*.formTable tr td {*/
+/*.formTable tr  {*/
+    /*text-align: right;*/
+    /*text-align: left;*/
+/*}*/
+/*.formTable tr td input {
+    text-align: left;
+}*/
 
 .error {
     color: red;

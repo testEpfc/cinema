@@ -18,7 +18,7 @@ and open the template in the editor.
         
         
         <form method="post" action="films.php">
-            <table>
+            <table class="formTable">
                 <tr>
                     <td>
                         Title:
@@ -40,7 +40,9 @@ and open the template in the editor.
                         Description:
                     </td>
                     <td>
-                        <input type="text" name="description" required placeholder="the description" value="">
+                        <!--<input type="text" name="description" required placeholder="the description" value="">-->
+                        <textarea  name="description" required placeholder="the description" value=""></textarea>
+                        <!--<text-area>-->
                     </td>
                 </tr>
                 <tr>
