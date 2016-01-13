@@ -92,9 +92,9 @@ try {
     }
     $reponseTitre = $porteMysql->query("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='$DBName' AND `TABLE_NAME`='$tableName' ");
     $allTitre = $reponseTitre->fetchAll();
-    if(isset($_REQUEST['isList']) && !empty($_REQUEST['isList']) && $_REQUEST['isList'])
+    if(isset($_REQUEST['isList']) && !empty($_REQUEST['isList']))
     {
-        $isList = 1;
+        $isList = $_REQUEST['isList'];
     }
     
 }
@@ -147,15 +147,24 @@ $porteMysql = null;
         <!--<li style="margin: auto;height:1px;"></li>-->
         <li>
         <?php
-        if($isList)
+        
+        if($isList  == 1)
         {
             $listClass = ' class="active"';
             $imageClass = '';
+            $gridClass = '';
+        }
+        elseif($isList  == 0)
+        {
+            $listClass = '';
+            $imageClass = ' class="active"';
+            $gridClass = '';
         }
         else
         {
             $listClass = '';
-            $imageClass = ' class="active"';
+            $imageClass = '';
+            $gridClass = ' class="active"';
         }
         ?>
         <?php if($isEmpty)
@@ -163,14 +172,16 @@ $porteMysql = null;
 //            echo '<a href="films.php?isList=1"> <button> List </button></a></li><li>';
 //            echo '<a href="films.php?isList=0"> <button> Image </button></a>';
             echo '<a href="films.php?isList=1"'.$listClass.'> List </a></li><li>';
-            echo '<a href="films.php?isList=0"'.$imageClass.'> Image </a>';
+            echo '<a href="films.php?isList=0"'.$imageClass.'> Image </a></li><li>';
+            echo '<a href="films.php?isList=2"'.$gridClass.'> Grid </a>';
         }
         else
         {
 //            echo '<a href="films.php?isList=1&search='.$search.'"> <button> List </button></a>';
 //            echo '<a href="films.php?isList=0&search='.$search.'"> <button> Image </button></a>';
             echo '<a href="films.php?isList=1&search='.$search.'"'.$listClass.'> List </a></li><li>';
-            echo '<a href="films.php?isList=0&search='.$search.'"'.$imageClass.'> Image </a>';
+            echo '<a href="films.php?isList=0&search='.$search.'"'.$imageClass.'> Image </a></li><li>';
+            echo '<a href="films.php?isList=2&search='.$search.'"'.$gridClass.'> Grid </a>';
         }
         ?>
         </li></ul>
