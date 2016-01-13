@@ -11,10 +11,11 @@
 //        $tableData[0][1]= "sqdfqsd";
         $row = count($tableData);
 //        $row = 1;
-        $indexToUse = Array(1,2,3);
+        $indexToUse = Array(1,2,3,4);
 //        $indexToUse = Array(0,1,2,3);
 //        $IMG = $$tableData[$i][$indexToUse[4]]; 
         $IMG = 'DbAffiches/Affiche1.jpg';
+        $path = 'DbAffiches/';
         ?>
 
 
@@ -34,7 +35,7 @@
                 </h3>
 
                 <div class="gridTableContainer">
-                        <img src="<?php echo $IMG ?>" alt=""/>
+                        <img src="<?php echo $path.$tableData[$i][$indexToUse[3]] ?>" alt=""/>
 
                         <div class="compacteur">
                                 <?php echo $tableData[$i][$indexToUse[2]]?>

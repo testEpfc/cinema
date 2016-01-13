@@ -27,7 +27,7 @@ try {
     //$titre = filter_var($titre, FILTER_SANITIZE_STRING);
     //$date = filter_var($date, FILTER_SANITIZE_STRING);
 
-    $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`) VALUES (NULL, \"$titre\", \"$date\", \"$description\")");
+    $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`, `poster`) VALUES (NULL, \"$titre\", \"$date\", \"$description\", \"$titre\")");
     }
     
     
