@@ -180,7 +180,7 @@ $porteMysql = null;
         <?php 
         if($isList)
         {
-            include 'responsiveTableFiller.php';
+            include 'responsiveTableFillerWithoutJS.php';
             responsiveTableFiller($all,$allTitre);
         }
         else 
