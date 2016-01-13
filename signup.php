@@ -8,8 +8,9 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Sign Up</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>-->
+        <?php include "CSSInclude.php";?>
     </head>
     <body>
         <?php include './header.php';?>

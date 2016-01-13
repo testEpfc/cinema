@@ -8,8 +8,10 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Index</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>-->
+        
+        <?php include "CSSInclude.php";?>
         <style>
 /*            ul {
                  list-style: none;
@@ -30,11 +32,17 @@ and open the template in the editor.
     <body>
         <?php include './header.php';?>
         <?php if(isset($_REQUEST['welcome']) && !empty($_REQUEST['welcome']) && isset($_REQUEST['username']) && !empty($_REQUEST['username']))
-        { ?>
+        { 
+            if($_REQUEST['welcome'] == 1) {   ?>
         <div class="goodFeedBack">
-            Welcome to Cinema <?php echo $_REQUEST['username'] ?>
+            Welcome to Cinema, <?php echo $_REQUEST['username'] ?>
         </div>
-        <?php } ?>
+        <?php } 
+        elseif($_REQUEST['welcome'] == 2) {   ?>
+        <div class="goodFeedBack">
+            Welcome back to Cinema, <?php echo $_REQUEST['username'] ?>
+        </div>
+        <?php }} ?>
     <main>
         
         <h1>Index</h1>

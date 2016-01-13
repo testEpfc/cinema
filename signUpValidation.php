@@ -41,8 +41,9 @@ $porteMysql->query("INSERT INTO `$DBName`.`$logTableName` (`id`, `nickname`, `pa
         <?php // if($isEmpty){ echo '<meta http-equiv="refresh" content="0; url=signin.php?error=1" />' ; }?>
         <meta http-equiv="refresh" content="0; url=index.php?welcome=<?php echo $welcome; ?>&username=<?php echo $username; ?>" />
         <meta charset="UTF-8">
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>-->
+        <?php include "CSSInclude.php";?>
         <title> Sign Up Validation</title>
     </head>
     <body>

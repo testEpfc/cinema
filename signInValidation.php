@@ -11,7 +11,7 @@ and open the template in the editor.
 
 include "DBInfo.php";
 
-$porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
+$porteMysql = new PDO('mysql:host='.$serverName.';dbname='.$DBName.';charset=utf8', $userName, $password);
 if(isset($_REQUEST['username']) && isset($_REQUEST['password']))
 {
     $username = $_REQUEST['username'];
@@ -51,8 +51,9 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']))
     <head>
         <?php if($isEmpty){ echo '<meta http-equiv="refresh" content="0; url=signin.php?error=1" />' ; }?>
         <meta charset="UTF-8">
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+        <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>-->
+        <?php include "CSSInclude.php";?>
         <title>signupValidation</title>
     </head>
     <body>

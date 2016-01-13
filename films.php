@@ -113,10 +113,11 @@ $porteMysql = null;
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
         <link href="css/resultList.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>-->
+        <?php include "CSSInclude.php";?>
         <title> Films List </title>
         <style>
         </style>
