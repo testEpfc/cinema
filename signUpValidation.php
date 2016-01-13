@@ -13,7 +13,8 @@ include "DBInfo.php";
 $welcome = 0;
 $username = "";
 $porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
-if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && isset($_REQUEST['email']))
+if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && isset($_REQUEST['email'])
+      &&  !empty($_REQUEST['username']) && !empty($_REQUEST['password']) && !empty($_REQUEST['email']))
 {
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
