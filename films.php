@@ -179,15 +179,21 @@ $porteMysql = null;
         <br>-->
         
         <?php 
-        if($isList)
+        if($isList == 1)
         {
             include 'responsiveTableFillerWithoutJS.php';
             responsiveTableFiller($all,$allTitre);
         }
-        else 
+//        elseif($isList == 0)
+        elseif($isList == 0)
         {
             include 'resultListFiller.php';
             resultListFiller($all);
+        }
+        elseif($isList == 2)
+        {
+            include 'gridTableFiller.php';
+            gridTableFiller($all);
         }
         ?>
         
