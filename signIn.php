@@ -61,7 +61,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQU
                         Username:
                     </td>
                     <td>
-                        <input type="text" name="username" placeholder="username" value="">
+                        <input type="text" name="username" placeholder="username" value="" required>
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQU
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="password" placeholder="********" value="">
+                        <input type="password" name="password" placeholder="********" value="" required>
                     </td>
                 </tr>
                 <tr>

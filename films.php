@@ -23,11 +23,18 @@ try {
         $titre = $_REQUEST['titre'];
         $date = $_REQUEST['date'];
         $description = $_REQUEST['description'];
-
+        if(isset($_REQUEST['poster']) && !empty($_REQUEST['poster']))
+        {
+        $poster = $_REQUEST['poster'];
+        }
+        else
+        {
+        $poster = $titre.'.jpg';
+        }
     //$titre = filter_var($titre, FILTER_SANITIZE_STRING);
     //$date = filter_var($date, FILTER_SANITIZE_STRING);
 
-    $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`, `poster`) VALUES (NULL, \"$titre\", \"$date\", \"$description\", \"$titre\")");
+    $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`, `poster`) VALUES (NULL, \"$titre\", \"$date\", \"$description\", \"$poster\")");
     }
     
     
@@ -141,6 +148,7 @@ $porteMysql = null;
                        
          <?php if($badSearch){echo $badSearchMessage;} ?>
         <br>
+<!--<div class="sideBars">-->
         <ul class="navbar miniNavbar">
         <!--<div style="width: 10px;">dsqf</div>-->
         <!--<li style="width: 50px;height:1px;"></li>-->
@@ -188,7 +196,6 @@ $porteMysql = null;
         <!--<input type="button" name=""-->
 <!--        <br>
         <br>-->
-        
         <?php 
         if($isList == 1)
         {
@@ -207,7 +214,9 @@ $porteMysql = null;
             gridTableFiller($all);
         }
         ?>
-        
+    <!--<div class="bottomBar">-->
+    <!--</div>-->
+<!--</div>-->
         <br>
         <a href="form.php"> <button> add a film </button></a>
         

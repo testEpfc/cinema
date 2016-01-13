@@ -58,6 +58,46 @@ and open the template in the editor.
             <li>
                 <a href="signup.php"> sign up </a>
             </li>
+            <li>
+                <!--<button><a href="films.php"> films list </a></button>-->
+               <a href="films.php"> films list </a>
+            </li>
+            <li>
+                <a href="form.php"> add a film </a>
+            </li>
+            <li>
+                <a href="signup.php"> sign up </a>
+            </li>
+            <li>
+                <!--<button><a href="films.php"> films list </a></button>-->
+               <a href="films.php"> films list </a>
+            </li>
+            <li>
+                <a href="form.php"> add a film </a>
+            </li>
+            <li>
+                <a href="signup.php"> sign up </a>
+            </li>
+            <li>
+                <!--<button><a href="films.php"> films list </a></button>-->
+               <a href="films.php"> films list </a>
+            </li>
+            <li>
+                <a href="form.php"> add a film </a>
+            </li>
+            <li>
+                <a href="signup.php"> sign up </a>
+            </li>
+            <li>
+                <!--<button><a href="films.php"> films list </a></button>-->
+               <a href="films.php"> films list </a>
+            </li>
+            <li>
+                <a href="form.php"> add a film </a>
+            </li>
+            <li>
+                <a href="signup.php"> sign up </a>
+            </li>
         </ul>
         
         

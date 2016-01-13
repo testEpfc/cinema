@@ -32,7 +32,8 @@ and open the template in the editor.
                         Date:
                     </td>
                     <td>
-                        <input type="number" name="date" required placeholder="1997" value="1338">
+                        <input type="number" name="date" required placeholder="1997" value="">
+                        <!--<input type="number" name="date" required placeholder="1997" value="1338">-->
                     </td>
                 </tr>
                 <tr>
@@ -43,6 +44,15 @@ and open the template in the editor.
                         <!--<input type="text" name="description" required placeholder="the description" value="">-->
                         <textarea  name="description" required placeholder="the description" value=""></textarea>
                         <!--<text-area>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Poster name:
+                    </td>
+                    <td>
+                        <!--<input type="text" name="poster" required placeholder="the poster's name" value="">-->
+                        <input type="text" name="poster" placeholder="the poster's name" value="">
                     </td>
                 </tr>
                 <tr>

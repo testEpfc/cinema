@@ -50,7 +50,7 @@ $porteMysql->query("INSERT INTO `$DBName`.`$logTableName` (`id`, `nickname`, `pa
                         Username:
                     </td>
                     <td>
-                        <input type="text" name="username" placeholder="username">
+                        <input type="text" name="username" placeholder="username" required>
                     </td>
                 </tr>
                 <tr>
@@ -58,7 +58,7 @@ $porteMysql->query("INSERT INTO `$DBName`.`$logTableName` (`id`, `nickname`, `pa
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="password" placeholder="********">
+                        <input type="password" name="password" placeholder="********" required>
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@ $porteMysql->query("INSERT INTO `$DBName`.`$logTableName` (`id`, `nickname`, `pa
                         Email:
                     </td>
                     <td>
-                        <input type="email" name="email" placeholder="address@domain.com">
+                        <input type="email" name="email" placeholder="address@domain.com" required>
                     </td>
                 </tr>
                 <tr>

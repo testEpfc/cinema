@@ -1,5 +1,7 @@
 <?php 
 $srcImage = "ressources/1.jpg ";
+$srcImage = "ressources/chess_board_glass_black_white_surface_15259_2560x1024.jpg ";
+
 $links = array('index.php','signin.php','signup.php','films.php','form.php');
 $activeMark = '" class="active';
 $linksSize = count($links);
@@ -16,25 +18,29 @@ $j=0;
 ?>
 <header>
     
+    <div class="bannerPlaceHolder">
     <div class="banner">
-        <img src="<?php echo $srcImage; ?>">
+        <div class="bannerImagePlaceHolder">
+            <img src="<?php echo $srcImage; ?>">
+        </div>
         <div class="overlapper">
         <h1 class="masterH1"> Cinema </h1>
         <br>
         
         <form method="get" action="films.php">
             <div class="searchBarSizer">
-            <!--<input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px" autofocus="autofocus">-->
-            <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px">
-            <!--<input type="hidden" name="isList" value="<?php // echo $isList; ?>">-->
-            <input type="hidden" name="isList" value="<?php if(isset($isList) && !empty($isList)){echo $isList;}else{echo 0;} ?>">
-            <!--<input type="hidden" name="isList" value="0">-->
+                <!--<input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px" autofocus="autofocus">-->
+                <input type="text" placeholder="type a film or a year to search here" name="search" value="" size="60px">
+                <!--<input type="hidden" name="isList" value="<?php // echo $isList; ?>">-->
+                <input type="hidden" name="isList" value="<?php if(isset($isList) && !empty($isList)){echo $isList;}else{echo 0;} ?>">
+                <!--<input type="hidden" name="isList" value="0">-->
             </div>
             <input type="submit" value="Search">
             <!--<br><br><br>-->
             
         </form>
         </div>
+    </div>
     </div>
     
     <ul class="navbar">

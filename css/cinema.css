@@ -24,9 +24,12 @@ body {
     background-color: rgb(180,180,220);
     background-color: rgb(0, 204, 255);
     background-color: rgba(0, 138, 255, 0.87);
+    background-color: white;
+    background-color: rgba(255,255,255,1);
     color: rgb(0,0,200);
     color: rgb(0, 71, 179);
     color: white;
+    color: black;
     /*font-size: 50%;*/
     font-size: 85%;
     /*height: 100%;*/
@@ -56,6 +59,7 @@ header, footer {
 }*/
 .banner {
     /*margin-top: 50px;*/
+    margin: auto;
     margin-top: 100px;
     /*height:220px;*/
     height:170px;
@@ -63,21 +67,53 @@ header, footer {
     /*box-shadow: 0px -3px 5px -2px black inset;*/
     /*box-shadow: 0px -6px 10px -2px black inset;*/
     box-shadow: 0px -7px 10px -5px black inset;
+    position: fixed;
+    top:0;
+    z-index: -5;
+    width:100%;
+}
+.bannerPlaceHolder {
+    /*margin-top: 50px;*/
+    margin-top: 100px;
+    /*height:220px;*/
+    height:170px;
+    width:100%;
 }
 .banner img {
     /*height:350px;*/
     /*position: static;*/
     position: absolute;
+    position: fixed;
     /*position: relative;*/
     top: 0;
     left: 0;    
-    z-index: -1;
+    /*left: 25%;*/    
+    z-index: -100;
     /*height:250px;*/
     height:320px;
     height:270px;
     width:100%;
+    /*width:50%;*/
+    /*max-width:50%;*/
+    /*margin: auto;*/
     /*width:10000px;*/
     /*box-shadow: 0px 4px 4px -1px black inset;*/
+    /*display:none;*/
+}
+.bannerImagePlaceHolder {
+    position: absolute;
+    /*position: relative;*/
+    top: 0;
+    left: 0;    
+    /*left: 25%;*/    
+    z-index: -1;
+    /*z-index: 10;*/
+    /*height:250px;*/
+    height:320px;
+    height:270px;
+    width:100%;
+    background-color: rgba(0,0,0,0);
+    /*background-color: rgba(0,0,0,1);*/
 }
 /*@media (min-width: 400px){
     position: absolute;
@@ -95,11 +131,17 @@ header, footer {
 }
 main {
     margin: auto;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+    padding-top: 20px;
     /*padding-top: 50px;*/
     padding-bottom: 50px;
     text-align: center;
+    background-color: rgba(255,255,255,1);
+    background-color: white;
+    box-shadow: 0 0 6px 3px black;
 }
+/*main < {
+}*/
 footer {
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -115,15 +157,20 @@ table {
     margin: auto;
     /*text-align: center;*/
 }
-.responsiveTable {
+.responsiveTable, .resultList, .navbar, .gridTable {
+    color: white;
+    color: black;
+    background-color: rgb(0, 71, 179);
+    background-color: white;
+}
+.navbar li a {
+    color: black;
+}
+/*.resultList {
     color: white;
     background-color: rgb(0, 71, 179);
-}
-.resultList {
-    color: white;
-    background-color: rgb(0, 71, 179);
-}
-table.resultList, .navbar.miniNavbar, table.responsiveTable {
+}*/
+table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
         /*max-width: 800px;*/
         width: 95%;
         /*width: 400px;*/
@@ -131,7 +178,8 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable {
         /*box-shadow: 0px 2px 4px black;*/
 }
 @media (min-width: 850px){
-    table.resultList, .navbar.miniNavbar, table.responsiveTable {
+    table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
+    /*table.resultList, .navbar.miniNavbar, table.responsiveTable {*/
         /*max-width: 800px;*/
         width: 800px;
         /*width: 400px;*/
@@ -176,9 +224,11 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable {
     text-align: center;
 /*    position : fixed;
     top: 52px;*/
+    box-shadow: 0 0 6px 3px black;
 }
 .masterH1 {
     color: white;
+    color: black;
     /*size: 1em;*/
     font-size: 2em;
     font-size: 20px;
@@ -188,7 +238,38 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable {
     /*font-size: 100px;*/
     /*size: 3em;*/
     /*size: 4em;*/
+    /*background-color: rgba(0,0,0,0.7);*/
+    /*background-color: rgba(0,0,0,1);*/
+    background-color: black;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    /*width: 100px;*/
+    display: inline-block;
+    padding: 0 20px 0 20px;
 }
 main h1:first-of-type {
     margin-bottom: 40px;
 }
+input[type=submit], a button {
+    /*text-decoration: none;*/
+    border: none;
+    color: black;
+    background-color: white;
+    box-shadow:  0px 0px 3px 2px rgba(0,0,0,1) inset;
+    padding: 5px;
+}
+input[type=submit]:hover, a button:hover {
+/*    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.2);*/
+    box-shadow:  none;
+    box-shadow:  0px 0px 3px 2px rgba(0,0,0,1);
+}
+/*.sideBars, .bottomBar {
+    max-width: 1000px;
+    max-width: 1000px;
+    min-height: 50px;
+    background-color: white;
+    margin: auto;
+}*/
