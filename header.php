@@ -38,7 +38,7 @@ $j=0;
     </div>
     
     <ul class="navbar">
-        <li><a href="<?php echo $links[$j++] ?>"> Menu </a></li>
+        <li><a href="<?php echo $links[$j++] ?>"> Home </a></li>
         <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign In </a></li>
         <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign Up </a></li>
         <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>

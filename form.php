@@ -7,14 +7,14 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>form</title>
+        <title>Add Films</title>
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main FORM</h1>
+        <h1>Add Films</h1>
         
         
         <form method="post" action="films.php">

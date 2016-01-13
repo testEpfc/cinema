@@ -45,7 +45,7 @@ and open the template in the editor.
         <?php }} ?>
     <main>
         
-        <h1>Index</h1>
+        <h1>Home</h1>
         
         <ul style="list-style: none">
             <li>

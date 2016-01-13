@@ -42,7 +42,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQU
     <head>
         <?php if(!$isEmpty && $isCorrect){ echo '<meta http-equiv="refresh" content="0; url=index.php?welcome=2&username='.$username.'" />' ; }?>
         <meta charset="UTF-8">
-        <title>sign in</title>
+        <title>Sign In</title>
 <!--        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/navigationBar.css" rel="stylesheet" type="text/css"/>-->
         <?php include "CSSInclude.php";?>
@@ -50,7 +50,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQU
     <body>
         <?php include './header.php';?>
     <main>
-        <h1>Ici le main SIGN IN</h1>
+        <h1>Sign In</h1>
         
         <?php if($isEmpty && !$isCorrect){ echo "<h3 class='error'>The username and/or the password are wrong. Try again</h3>";} ?>
         <!--<form method="get" action="signinValidation.php">-->

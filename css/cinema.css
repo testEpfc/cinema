@@ -162,3 +162,6 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable {
     /*size: 3em;*/
     /*size: 4em;*/
 }
+main h1:first-of-type {
+    margin-bottom: 40px;
+}

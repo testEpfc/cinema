@@ -118,15 +118,15 @@ $porteMysql = null;
         <link href="css/resultList.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>-->
         <?php include "CSSInclude.php";?>
-        <title> Films List </title>
+        <title> Films </title>
         <style>
         </style>
     </head>
     <body>
         <?php include './header.php';?>
     <main>
-        <h1> Films List </h1>
-        <br>
+        <h1> Films </h1>
+        <!--<br>-->
         <!--<br>-->
         
         <?php // if($isEmpty){echo $all[0]['annee'];} ?>
