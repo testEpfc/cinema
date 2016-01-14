@@ -44,6 +44,10 @@ and open the template in the editor.
 .resultList td {
     padding: 10px;
 }
+.resultList .resultListSizer {
+    max-height: 200px;
+    overflow: hidden;
+}
 /*.resultList td{
     width: 1400px;
 }*/

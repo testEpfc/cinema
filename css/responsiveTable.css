@@ -36,7 +36,20 @@ and open the template in the editor.
 }
 .responsiveTable tr {
     /*border: 1px solid black;*/
+    /*max-height: 200px;*/
 }
+.responsiveTable td {
+    /*border: 1px solid black;*/
+    max-height: 100px;
+    /*height: 100px;*/
+    overflow: hidden;
+}
+.responsiveTable tr:nth-child(odd){
+    box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7);
+}
+.responsiveTable tr:nth-child(even){
+    box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7) inset;
+}  
 @media screen and (min-width: 800px) {
     .responsiveTable {
         width: 80%;
@@ -54,28 +67,34 @@ and open the template in the editor.
     }
     .responsiveTable th {
         display: table-cell;
+        /*display: initial;*/
         /*color:yellow;*/
     }
     .responsiveTable tr {
         /*border: solid black 1px;*/
+        height: 100px;
+        overflow: hidden;
     } 
     .responsiveTable {
         /*width: 80%;*/
         margin: auto;
         text-align: center;
     }
-    
-    
-/*    .responsiveTable tr:nth-child(odd){
-        box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7);
+    .responsiveTable .responsiveTableSizer {
+        /*border: 1px solid black;*/
+        max-height: 100px;
+        /*height: 100px;*/
+        /*width: 100px !important;*/   
+        /*overflow: hidden !important;*/
+        overflow: hidden;
+        /*color: white !important;*/
     }
-    .responsiveTable tr:nth-child(even){
-        box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7) inset;
-    }    */
-}
+    
+      
     .responsiveTable tr:nth-child(even){
         box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7);
     }
     .responsiveTable tr:nth-child(odd){
         box-shadow:  0px 0px 6px 1px rgba(0,0,0,0.7) inset;
-    }    
+    }       
+}

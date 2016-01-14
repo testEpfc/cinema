@@ -54,6 +54,9 @@ try {
 
 //    $porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
     $isList = 0;
+    $isList = 2;
+    $isList = 1;
+    $isList = 2;
     $isEmpty = 1;
     $badSearch = 0;
     $search = '';
@@ -162,13 +165,19 @@ $porteMysql = null;
             $imageClass = '';
             $gridClass = '';
         }
-        elseif($isList  == 0)
+        elseif($isList  == 2)
         {
             $listClass = '';
             $imageClass = ' class="active"';
             $gridClass = '';
         }
-        else
+        elseif($isList  == 3)
+        {
+            $listClass = '';
+            $imageClass = '';
+            $gridClass = ' class="active"';
+        }
+        elseif($isList  == 0)
         {
             $listClass = '';
             $imageClass = '';
@@ -180,16 +189,16 @@ $porteMysql = null;
 //            echo '<a href="films.php?isList=1"> <button> List </button></a></li><li>';
 //            echo '<a href="films.php?isList=0"> <button> Image </button></a>';
             echo '<a href="films.php?isList=1"'.$listClass.'> List </a></li><li>';
-            echo '<a href="films.php?isList=0"'.$imageClass.'> Image </a></li><li>';
-            echo '<a href="films.php?isList=2"'.$gridClass.'> Grid </a>';
+            echo '<a href="films.php?isList=2"'.$imageClass.'> Image </a></li><li>';
+            echo '<a href="films.php?isList=3"'.$gridClass.'> Grid </a>';
         }
         else
         {
 //            echo '<a href="films.php?isList=1&search='.$search.'"> <button> List </button></a>';
 //            echo '<a href="films.php?isList=0&search='.$search.'"> <button> Image </button></a>';
             echo '<a href="films.php?isList=1&search='.$search.'"'.$listClass.'> List </a></li><li>';
-            echo '<a href="films.php?isList=0&search='.$search.'"'.$imageClass.'> Image </a></li><li>';
-            echo '<a href="films.php?isList=2&search='.$search.'"'.$gridClass.'> Grid </a>';
+            echo '<a href="films.php?isList=2&search='.$search.'"'.$imageClass.'> Image </a></li><li>';
+            echo '<a href="films.php?isList=3&search='.$search.'"'.$gridClass.'> Grid </a>';
         }
         ?>
         </li></ul>
@@ -203,12 +212,12 @@ $porteMysql = null;
             responsiveTableFiller($all,$allTitre);
         }
 //        elseif($isList == 0)
-        elseif($isList == 0)
+        elseif($isList == 2)
         {
             include 'resultListFiller.php';
             resultListFiller($all);
         }
-        elseif($isList == 2)
+        elseif($isList == 3)
         {
             include 'gridTableFiller.php';
             gridTableFiller($all);

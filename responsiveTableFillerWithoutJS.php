@@ -13,7 +13,7 @@
             <?php for($i=0; $i<$row;++$i){ ?>
             <tr>
                 <?php for($j=0; $j<$column;++$j){ ?>
-                    <td data-tab="<?php echo $tableTitle[$j][0] ?>"> <?php echo $tableData[$i][$j] ?> </th>
+                <td data-tab="<?php echo $tableTitle[$j][0] ?>"> <div class="responsiveTableSizer"><?php echo $tableData[$i][$j] ?> </div></td>
                 <?php } ?>
             </tr>
             <?php } ?>

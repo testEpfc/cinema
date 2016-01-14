@@ -18,7 +18,7 @@
         for($i=0;$i<$row;++$i)
         {
             echo '<tr>';
-            echo '<td>';
+            echo '<td><div class="resultListSizer">';
 //            echo '<img src="DbAffiches/Affiche1.jpg" alt=""/>';
 //
 //            echo "<h3>".$all[$i]['titre'].""; 
@@ -40,7 +40,7 @@
             echo " (".$tableData[$i][$indexToUse[1]].") </h3>"; 
             echo $tableData[$i][$indexToUse[2]]; 
             
-            echo '</td>';
+            echo '</td></td>';
             echo '</tr>';
         }  
         echo '</table>';
