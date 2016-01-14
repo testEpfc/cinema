@@ -26,7 +26,7 @@
         <div class="gridTable">
         <?php for($i=0;$i<$row;++$i){ ?>
             
-            <div class="gridTableContainerExt">
+            <a href="index.php"><div class="gridTableContainerExt">
                 <h3>
                 <?php echo $tableData[$i][$indexToUse[0]]?>
                 ( 
@@ -41,7 +41,7 @@
                                 <?php echo $tableData[$i][$indexToUse[2]]?>
                         </div>       
                 </div>
-            </div>
+                </div></a>
         <?php } ?>        
         </div>
         

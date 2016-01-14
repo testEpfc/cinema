@@ -1,41 +1,17 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 07-janv.-2016, 20:10:09
-    Author     : 1009qugeorge
-*/
 
-/*.resultList tr:nth-child(even) td{
-    float: left;
-}*/
-/*.resultList tr:nth-child(even) td * {
-    float: left;
-}*/
-/*.resultList tr:nth-child(even) td ul, .resultList tr:nth-child(even) td img {
-    float: left;
-}*/
 .resultList tr:nth-child(even) td img {
     float: left;
+    /*box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) inset;*/
 }
-/*.resultList tr:nth-child(odd) td{
-    float: right;
-}*/
-/*.resultList tr:nth-child(odd) td * {
-    float: right;
-}*/
-/*.resultList tr:nth-child(odd) td ul, .resultList tr:nth-child(odd) td img {
-    float: right;
-}*/
 .resultList tr:nth-child(odd) td img {
     float: right;
+    /*box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) ;*/
 }
 .resultList img {
     /*height: 100px;*/
     height: 200px;
     padding: 10px 20px 5px 20px;
+    /*margin: 10px 20px 5px 20px;*/
 }
 .resultList, .resultList tr {
     /*border: 1px solid black;*/
@@ -60,13 +36,21 @@ and open the template in the editor.
     /*box-shadow:  0px 6px 2px 4px black;*/
     /*box-shadow:  0px 6px 9px 4px rgba(0,0,0,0.7);*/
 }
-/*.resultList tr:nth-child(odd){*/
 .resultList tr:nth-child(even){
     box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7);
 }
-/*.resultList tr:nth-child(even){*/
 .resultList tr:nth-child(odd){
     box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) inset;
+}
+.resultList tr:nth-child(even):hover {
+/*    box-shadow: none;
+    box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) inset;*/
+    background-color: rgba(0,0,0,0.5);
+}
+.resultList tr:nth-child(odd):hover {
+/*    box-shadow: none;
+    box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7);*/
+    background-color: rgba(0,0,0,0.5);
 }
 .resultList {   
     /*box-shadow:  0px 10px 6px 1px black;*/

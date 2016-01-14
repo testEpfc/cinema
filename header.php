@@ -2,6 +2,7 @@
 $srcImage = "ressources/1.jpg ";
 $srcImage = "ressources/chess_board_glass_black_white_surface_15259_2560x1024.jpg ";
 $srcImage = "ressources/dark-clouds-over-hollywood.jpg ";
+$srcImage = "ressources/hollywood.jpg ";
 $links = array('index.php','signin.php','signup.php','films.php','form.php');
 $activeMark = '" class="active';
 $linksSize = count($links);
