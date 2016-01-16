@@ -12,37 +12,29 @@
         $indexToUse = Array(1,2,3,4);
 //        $indexToUse = Array(0,1,2,3);
 //        $IMG = $$tableData[$i][$indexToUse[4]]; 
-        $IMG = 'DbAffiches/Affiche1.jpg';
+//        $IMG = 'DbAffiches/Affiche1.jpg';
         $path = 'DbAffiches/';
-        echo '<table class="resultList">';
+        ?>
+        <table class="resultList">
+        <?php
         for($i=0;$i<$row;++$i)
-        {
-            echo '<tr>';
-            echo '<td><div class="resultListSizer">';
-//            echo '<img src="DbAffiches/Affiche1.jpg" alt=""/>';
-//
-//            echo "<h3>".$all[$i]['titre'].""; 
-//            echo " (".$all[$i]['annee'].") </h3>"; 
-//            echo $all[$i]['description']; 
-            
-//            echo '<img src="'.$IMG.'" alt=""/>';
-//            echo "<h3>".$all[$i]['titre'].""; 
-//            echo " (".$all[$i]['annee'].") </h3>"; 
-//            echo $all[$i]['description']; 
-            
-//            echo '<img src="'.$IMG.'" alt=""/>';
-//            echo "<h3>".$tableData[$i][0].""; 
-//            echo " (".$tableData[$i][1].") </h3>"; 
-//            echo $tableData[$i][2]; 
-//            
-            echo '<img src="'.$path.$tableData[$i][$indexToUse[3]].'" alt=""/>';
-            echo "<h3>".$tableData[$i][$indexToUse[0]].""; 
-            echo " (".$tableData[$i][$indexToUse[1]].") </h3>"; 
-            echo $tableData[$i][$indexToUse[2]]; 
-            
-            echo '</td></td>';
-            echo '</tr>';
-        }  
-        echo '</table>';
-    }
-?>
+        {?>
+            <tr>
+                <td>
+                    <a href="filmContent.php?id=<?php echo $tableData[$i]['id'];?>" class="linkResultList">
+                        <div class="resultListSizer">
+                            <img src="<?php echo $path.$tableData[$i][$indexToUse[3]]?>" alt=""/>
+                            <h3>
+                                <?php echo $tableData[$i][$indexToUse[0]] ?> 
+                            ( <?php echo $tableData[$i][$indexToUse[1]]?> )
+                            </h3>
+                            <?php echo $tableData[$i][$indexToUse[2]]; ?>
+
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        <?php }  ?>
+        </table>
+    <?php  } ?>
+

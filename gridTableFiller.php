@@ -26,7 +26,7 @@
         <div class="gridTable">
         <?php for($i=0;$i<$row;++$i){ ?>
             
-            <a href="index.php"><div class="gridTableContainerExt">
+            <a href="filmContent.php?id=<?php echo $tableData[$i]['id'];?>"><div class="gridTableContainerExt">
                 <h3>
                 <?php echo $tableData[$i][$indexToUse[0]]?>
                 ( 

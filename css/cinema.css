@@ -255,7 +255,7 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
     /*width: 100px;*/
     display: inline-block;
     padding: 0 20px 0 20px;
-    box-shadow:  0px 0px 3px 2px rgba(0,0,0,1) inset;
+    /*box-shadow:  0px 0px 3px 2px rgba(0,0,0,1) inset;*/
 }
 .masterH1 a{
     text-decoration: none;
@@ -264,7 +264,7 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
 main h1:first-of-type {
     margin-bottom: 40px;
 }
-input[type=submit], input[type=text], a button {
+input[type=email], input[type=submit], input[type=text], input[type=number], input[type=password], textArea, a button, .masterH1 {
     /*text-decoration: none;*/
     border: none;
     color: black;
@@ -272,13 +272,20 @@ input[type=submit], input[type=text], a button {
     box-shadow:  0px 0px 3px 2px rgba(0,0,0,1) inset;
     padding: 5px;
 }
-input[type=submit]:hover, input[type=text]:hover, a button:hover, .masterH1:hover {
+input[type=email]:hover, input[type=submit]:hover, input[type=text]:hover, input[type=number]:hover, input[type=password]:hover, textArea:hover, a button:hover, .masterH1:hover {
 /*    background-color: rgba(0,0,0,0.5);
     background-color: rgba(0,0,0,0.5);
     background-color: rgba(255,255,255,0.2);*/
-    box-shadow:  none;
+    /*box-shadow:  none;*/
     box-shadow:  0px 0px 3px 2px rgba(0,0,0,1);
 }
+input[type=email]:focus, input[type=submit]:focus, input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, textArea:focus, .masterH1:focus {
+    /*box-shadow:  0px 0px 3px 3px rgba(100,100,255,1) inset;*/
+    box-shadow:  0px 0px 3px 2px rgba(0,0,0,1);
+}
+/*input[type=submit]:invalid, input[type=text]:invalid, input[type=number]:invalid, input[type=password]:invalid, textArea:invalid {
+    box-shadow:  0px 0px 3px 3px rgba(255,100,100,1) inset;
+}*/
 /*.sideBars, .bottomBar {
     max-width: 1000px;
     max-width: 1000px;

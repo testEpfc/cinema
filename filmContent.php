@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 
 /* 
@@ -21,3 +22,42 @@ catch (PDOException $e)
 {
     echo $e->getMessage();
 }
+
+?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Films</title>
+        <?php include 'CSSInclude.php';?>
+    </head>
+    <body>
+        <?php include './header.php';?>
+    <main>
+        <!--<h1>Add Films</h1>-->
+                <h1>
+                    <?php                    
+                    echo $all[0]['titre']; ;   
+                    echo " (".$all[0]['annee'].")"; 
+                    ?>
+                </h1>
+        
+        <div class="contentContainer">
+            <img src="<?php echo "DbAffiches/".$all[0]['poster'];     ?>">
+            <div class="contentContainerInfo">
+<!--                <h3>
+                    <?php                    
+//                    echo $all[0]['titre']; ;   
+//                    echo " (".$all[0]['annee'].")"; 
+                    ?>
+                </h3>-->
+            </div>
+            <?php echo $all[0]['description']; ; ?>
+        </div>
+        
+        
+        
+        
+    </main>
+    <?php include './footer.php'; ?>
+    </body>
+</html>

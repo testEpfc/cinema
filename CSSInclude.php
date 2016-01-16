@@ -4,3 +4,4 @@
 <link href="css/resultList.css" rel="stylesheet" type="text/css"/>
 <link href="css/responsiveTable.css" rel="stylesheet" type="text/css"/>
 <link href="css/gridTable.css" rel="stylesheet" type="text/css"/>
+<link href="css/filmContent.css" rel="stylesheet" type="text/css"/>
