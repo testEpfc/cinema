@@ -68,5 +68,22 @@ $j=0;
             <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign In </a></li>
             <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign Up </a></li>
         <?php } ?>
+            
+            
+            
+        <?php if(isset($_REQUEST['welcome']) && !empty($_REQUEST['welcome']) && isset($_REQUEST['username']) && !empty($_REQUEST['username']))
+        { 
+            if($_REQUEST['welcome'] == 1) {   ?>
+        <li class="goodFeedBack">
+            Welcome to Cinema, <?php echo $_REQUEST['username'] ?>
+        </li>
+        <?php } 
+        elseif($_REQUEST['welcome'] == 2) {   ?>
+        <li class="goodFeedBack" style="box-shadow: none;">
+            Welcome back to Cinema, <?php echo $_REQUEST['username'] ?>
+        </li>
+        <?php }} ?>
+            
+            
     </ul>
 </header>

@@ -42,18 +42,18 @@ and open the template in the editor.
     </head>
     <body>
         <?php include './header.php';?>
-        <?php if(isset($_REQUEST['welcome']) && !empty($_REQUEST['welcome']) && isset($_REQUEST['username']) && !empty($_REQUEST['username']))
+        <?php // if(isset($_REQUEST['welcome']) && !empty($_REQUEST['welcome']) && isset($_REQUEST['username']) && !empty($_REQUEST['username']))
         { 
-            if($_REQUEST['welcome'] == 1) {   ?>
-        <div class="goodFeedBack">
-            Welcome to Cinema, <?php echo $_REQUEST['username'] ?>
+//            if($_REQUEST['welcome'] == 1) {   ?>
+        <!--<div class="goodFeedBack">-->
+<!--            Welcome to Cinema, <?php // echo $_REQUEST['username'] ?>
         </div>
         <?php } 
-        elseif($_REQUEST['welcome'] == 2) {   ?>
+//        elseif($_REQUEST['welcome'] == 2) {   ?>
         <div class="goodFeedBack">
-            Welcome back to Cinema, <?php echo $_REQUEST['username'] ?>
-        </div>
-        <?php }} ?>
+            Welcome back to Cinema, <?php // echo $_REQUEST['username'] ?>
+        </div>-->
+        <?php // }} ?>
     <main>
         
         <h1>Home</h1>
