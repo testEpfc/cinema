@@ -5,7 +5,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 
 
-<?php 
+<?php
+include 'PHPTopInclude.php';
 
 include "DBInfo.php";
 //$isCorrect = 0;

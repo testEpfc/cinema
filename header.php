@@ -3,7 +3,9 @@ $srcImage = "ressources/1.jpg ";
 $srcImage = "ressources/chess_board_glass_black_white_surface_15259_2560x1024.jpg ";
 $srcImage = "ressources/dark-clouds-over-hollywood.jpg ";
 $srcImage = "ressources/hollywood.jpg ";
-$links = array('index.php','signin.php','signup.php','films.php','form.php');
+//$links = array('index.php','signin.php','signup.php','films.php','form.php');
+//$links = array('index.php','films.php','form.php','account.php','signin.php','signup.php');
+$links = array('index.php','films.php','form.php','account.php','signin.php','signup.php');
 $activeMark = '" class="active';
 $linksSize = count($links);
 //for($i=0;$i<4;++$i )
@@ -46,11 +48,25 @@ $j=0;
     
     <ul class="navbar">
         <li><a href="<?php echo $links[$j++] ?>"> Home </a></li>
-        <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign In </a></li>
-        <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign Up </a></li>
         <li><a href="<?php echo $links[$j++] ?>" > Films </a></li>
         <li><a href="<?php echo $links[$j++] ?>" > Add Films </a></li>
-        <!--<li class="nav-right"><a href=""> Search </a></li>-->
-        <!--<li><a href=""> Search </a></li>-->
+        <?php 
+        if($isLogged && isset($_SESSION['userID']))
+        {?>
+            <input type="checkbox" id="AccountCheckBox">
+            <li class="nav-right dropDownLi">
+                <label class="labelLI" for="AccountCheckBox"><?php echo $_SESSION['userID']?></label>
+            </li>
+            <li class="hiddable nav-right">
+                    <a href="index.php?disconnect=1" > Sign Out </a>
+            </li>
+            <li class="hiddable nav-right">
+                    <a href="index.php" > Settings </a>
+            </li>
+        <?php }
+        else { $j++; ?>
+            <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign In </a></li>
+            <li class="nav-right"><a href="<?php echo $links[$j++] ?>" > Sign Up </a></li>
+        <?php } ?>
     </ul>
 </header>

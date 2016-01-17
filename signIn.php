@@ -5,8 +5,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-
-<?php 
+<?php
+include 'PHPTopInclude.php';
 
 include "DBInfo.php";
 $isEmpty = 1;
@@ -33,6 +33,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQU
         $errMessage = "notEmpty";
         $isEmpty = 0;
         $isCorrect = 1;
+        $_SESSION['userID'] = $username;
     }
 }
 ?>
