@@ -1,0 +1,67 @@
+
+@import "cinema.scss";
+.resultList tr:nth-child(even) td img {
+    float: left;
+    /*box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) inset;*/
+}
+.resultList tr:nth-child(odd) td img {
+    float: right;
+    /*box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) ;*/
+}
+.resultList img {
+    /*height: 100px;*/
+    height: 200px;
+    padding: 10px 20px 5px 20px;
+    /*margin: 10px 20px 5px 20px;*/
+}
+.resultList, .resultList tr {
+    /*border: 1px solid black;*/
+    /*border-collapse: collapse;*/
+    border-collapse: collapse;
+}
+.resultList td {
+    padding: 10px;
+}
+.resultList .resultListSizer {
+    max-height: 200px;
+    overflow: hidden;
+}
+/*.resultList td{
+    width: 1400px;
+}*/
+.resultList tr{
+    /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+    /*box-shadow:  -4px 2px 8px -2px black, 4px 2px 8px -2px black;*/
+/*    box-shadow:  -4px 2px 8px -18px black, 4px 2px 8px -18px black,
+                 -18px 4px 8px -4px black, 18px 4px 8px -4px black;*/
+    /*box-shadow:  0px 4px 4px -1px black;*/
+    /*box-shadow:  0px 6px 2px 4px black;*/
+    /*box-shadow:  0px 6px 9px 4px rgba(0,0,0,0.7);*/
+}
+.resultList tr:nth-child(even){
+    box-shadow:  0px 0px 9px 4px $shadowColor;
+}
+.resultList tr:nth-child(odd){
+    box-shadow:  0px 0px 9px 4px $shadowColor inset;
+}
+.resultList tr:nth-child(even):hover {
+/*    box-shadow: none;
+    box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7) inset;*/
+    background-color: rgba(0,0,0,0.5);
+}
+.resultList tr:nth-child(odd):hover {
+/*    box-shadow: none;
+    box-shadow:  0px 0px 9px 4px rgba(0,0,0,0.7);*/
+    background-color: rgba(0,0,0,0.5);
+}
+.resultList {   
+    /*box-shadow:  0px 10px 6px 1px black;*/
+    /*box-shadow:  0px 0px 4px 1px black;*/
+}
+/*.clear {
+    clear: both;
+}*/
+.linkResultList {
+    text-decoration: none;
+    color:inherit;
+}

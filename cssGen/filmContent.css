@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-janv.-2016, 1:35:21
+    Author     : queni
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-d├®c.-2015, 21:46:15
+    Author     : jedepaepe
+*/
+/*$mainBackgroundColor: red;*/
+/*$mainBackgroundColor: blue;*/
+/*$mainBackgroundColor: black;*/
+/*$mainBackgroundColor: rgba(0,0,255,0.5);*/
+/*$mainBackgroundColor: rgba(0,0,255,0);*/
+/*$mainColor: red;
+$mainColor: blue;
+$mainColor: rgba(50,50,100,1);*/
+/*$mainColor: white;*/
+/*$navMainBackgroundColor: $mainBackgroundColor;
+$navMainBackgroundColor: rgba(0,0,255,0);*/
+/*$navMainColor: $mainColor;
+$navHoverBackgroundColor: $mainColor;*/
+/*$shadowColor: red;*/
+* {
+  margin: 0px;
+  /*padding: 0px;*/
+  font-family: "Segoe UI",Arial,sans-serif;
+  box-sizing: border-box;
+  /*transition: all 0.5s;*/
+  transition: all 0.25s; }
+
+html {
+  /*height: 100%;*/
+  position: relative;
+  min-height: 100%;
+  /*min-width: 600px;*/ }
+
+body {
+  background-color: #b4b4dc;
+  background-color: #00ccff;
+  background-color: rgba(0, 138, 255, 0.87);
+  background-color: white;
+  background-color: white;
+  background-color: white;
+  color: #0000c8;
+  color: #0047b3;
+  color: white;
+  color: black;
+  color: black;
+  /*font-size: 50%;*/
+  font-size: 85%;
+  /*height: 100%;*/
+  /*margin-bottom: 0px;*/
+  /*height: 90%;*/
+  /*height: 91%;*/ }
+
+header, footer {
+  text-align: center; }
+
+/*header {*/
+/*header .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}     */
+/*.banner h1 {
+    position : relative;
+    top: -250px;
+    color: white;
+}*/
+/*.banner .overlapper {
+    position : relative;
+    top: -150px;
+    color: white;
+}*/
+.banner {
+  /*margin-top: 50px;*/
+  margin: auto;
+  margin-top: 100px;
+  /*height:220px;*/
+  height: 170px;
+  /*min-height:150px;*/
+  /*box-shadow: 0px -3px 5px -2px black inset;*/
+  /*box-shadow: 0px -6px 10px -2px black inset;*/
+  /*box-shadow: 0px -7px 10px -5px black inset;*/
+  box-shadow: 0px -7px 10px -5px black inset;
+  position: fixed;
+  top: 0;
+  /*z-index: -1;*/
+  /*z-index: 50;*/
+  z-index: 0;
+  width: 100%; }
+
+.bannerPlaceHolder {
+  /*margin-top: 50px;*/
+  margin-top: 100px;
+  /*height:220px;*/
+  height: 170px;
+  width: 100%;
+  z-index: -30;
+  /*z-index: 30;*/ }
+
+.banner img {
+  /*height:350px;*/
+  /*position: static;*/
+  position: absolute;
+  position: fixed;
+  /*position: relative;*/
+  top: 0;
+  left: 0;
+  /*left: 25%;*/
+  z-index: -100;
+  /*height:250px;*/
+  height: 320px;
+  height: 270px;
+  width: 100%;
+  /*width:50%;*/
+  /*max-width:50%;*/
+  /*margin: auto;*/
+  /*width:10000px;*/
+  /*box-shadow: 0px 4px 4px -1px black inset;*/
+  /*display:none;*/ }
+
+.bannerImagePlaceHolder {
+  position: absolute;
+  /*position: relative;*/
+  top: 0;
+  left: 0;
+  /*left: 25%;*/
+  z-index: -1;
+  /*z-index: 10;*/
+  /*height:250px;*/
+  height: 320px;
+  height: 270px;
+  width: 100%;
+  background-color: transparent;
+  /*background-color: rgba(0,0,0,1);*/ }
+
+/*@media (min-width: 400px){
+    position: absolute;
+}*/
+.searchBarSizer {
+  margin: auto;
+  min-width: 280px;
+  max-width: 400px;
+  display: inline-block; }
+
+.searchBarSizer input[type=text] {
+  /*max-width: 400px;*/
+  /*min-width: 280px;*/
+  width: 100%; }
+
+main {
+  margin: auto;
+  /*margin-top: 20px;*/
+  padding-top: 20px;
+  /*padding-top: 50px;*/
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: white;
+  background-color: white;
+  background-color: white;
+  box-shadow: 0 0 6px 3px black;
+  position: relative;
+  z-index: 10; }
+
+/*main < {
+}*/
+footer {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  background-color: white;
+  background-color: white;
+  position: absolute;
+  z-index: 20;
+  bottom: 0px;
+  width: 100%;
+  /*height: 120px;*/
+  /*min-height: 120px;*/
+  box-shadow: 0px 2px 4px black inset;
+  /*position: relative;*/ }
+
+table {
+  margin: auto;
+  /*text-align: center;*/ }
+
+.responsiveTable, .resultList, .navbar, .gridTable {
+  /*.responsiveTable, .resultList, .navbar li, .gridTable {*/
+  color: white;
+  color: black;
+  color: black;
+  background-color: #0047b3;
+  background-color: white;
+  background-color: white; }
+
+.navbar li a {
+  color: black;
+  color: black; }
+
+/*.resultList {
+    color: white;
+    background-color: rgb(0, 71, 179);
+}*/
+table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
+  /*max-width: 800px;*/
+  width: 95%;
+  /*width: 400px;*/
+  /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+  /*box-shadow: 0px 2px 4px black;*/ }
+
+@media (min-width: 850px) {
+  table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
+    /*table.resultList, .navbar.miniNavbar, table.responsiveTable {*/
+    /*max-width: 800px;*/
+    width: 800px;
+    /*width: 400px;*/
+    /*box-shadow: 0px 2px 4px 4px black inset, 0px 2px 4px -4px black;*/
+    /*box-shadow: 0px 2px 4px black;*/ } }
+.formTable tr td {
+  /*text-align: right;*/
+  text-align: left; }
+
+.formTable tr td textarea {
+  width: 300px;
+  height: 100px; }
+
+.formTable tr td input:not([type=submit]) {
+  /*.formTable tr td input:not(:last-child) {*/
+  /*.formTable tr td:not(:last-child) input {*/
+  /*.formTable tr td:not(:last-child) {*/
+  /*.formTable tr td input:last-child {*/
+  /*input:not([type=submit]) {*/
+  /*input{*/
+  /*.formTable tr td input[type!=submit] {*/
+  width: 300px; }
+
+/*.formTable tr td {*/
+/*.formTable tr  {*/
+/*text-align: right;*/
+/*text-align: left;*/
+/*}*/
+/*.formTable tr td input {
+    text-align: left;
+}*/
+.error {
+  color: red; }
+
+.goodFeedBack {
+  background-color: greenyellow;
+  color: green;
+  width: 100%;
+  text-align: center;
+  /*    position : fixed;
+      top: 52px;*/
+  /*box-shadow: 0 0 6px 3px black;*/
+  box-shadow: none; }
+
+.masterH1 {
+  color: white;
+  color: black;
+  /*size: 1em;*/
+  font-size: 2em;
+  font-size: 20px;
+  font-size: 40px;
+  font-size: 60px;
+  /*font-size: 80px;*/
+  /*font-size: 100px;*/
+  /*size: 3em;*/
+  /*size: 4em;*/
+  /*background-color: rgba(0,0,0,0.7);*/
+  /*background-color: rgba(0,0,0,1);*/
+  background-color: black;
+  background-color: white;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 10px;
+  /*width: 100px;*/
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  /*box-shadow:  0px 0px 3px 2px rgba(0,0,0,1) inset;*/ }
+
+.masterH1 a {
+  text-decoration: none;
+  color: black;
+  color: black;
+  background-color: white; }
+
+main h1:first-of-type {
+  margin-bottom: 40px; }
+
+input[type=email], input[type=submit], input[type=text], input[type=number], input[type=password], textArea, a button, .masterH1 {
+  /*text-decoration: none;*/
+  border: none;
+  color: black;
+  color: black;
+  background-color: white;
+  background-color: white;
+  box-shadow: 0px 0px 3px 2px black inset;
+  padding: 5px; }
+
+input[type=email]:hover, input[type=submit]:hover, input[type=text]:hover, input[type=number]:hover, input[type=password]:hover, textArea:hover, a button:hover, .masterH1:hover {
+  /*    background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(255,255,255,0.2);*/
+  box-shadow: none;
+  /*box-shadow:  0px 0px 3px 2px rgba(0,0,0,1);*/ }
+
+input[type=email]:focus, input[type=submit]:focus, input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, textArea:focus, .masterH1:focus {
+  /*box-shadow:  0px 0px 3px 3px rgba(100,100,255,1) inset;*/
+  box-shadow: 0px 0px 3px 2px black; }
+
+/*input[type=submit]:invalid, input[type=text]:invalid, input[type=number]:invalid, input[type=password]:invalid, textArea:invalid {
+    box-shadow:  0px 0px 3px 3px rgba(255,100,100,1) inset;
+}*/
+/*.sideBars, .bottomBar {
+    max-width: 1000px;
+    max-width: 1000px;
+    min-height: 50px;
+    background-color: white;
+    margin: auto;
+}*/
+.contentContainer {
+  margin: auto;
+  max-width: 800px;
+  box-shadow: 0px 0px 4px 3px black inset;
+  padding: 10px;
+  overflow: hidden; }
+
+.contentContainer img {
+  margin: auto;
+  /*max-width: 800px;*/
+  /*width: 200px;*/
+  width: 300px;
+  /*max-width: 300px;*/
+  float: left;
+  padding: 10px; }
+
+/*.contentContainer .contentContainerInfo {
+    margin: auto;
+    max-width: 800px;
+    float: left;
+}*/
+
+/*# sourceMappingURL=filmContent.css.map */

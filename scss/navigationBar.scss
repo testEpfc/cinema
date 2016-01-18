@@ -1,0 +1,158 @@
+@import "cinema.scss";
+
+/*.navbar ul {*/
+ul.navbar  {
+    position: relative;
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+/*    max-height: 51px;
+    max-height: 47px;*/
+    /*overflowhidden fixes bugs for no reason....*/
+    overflow: hidden;
+    /*background-color: #333;*/
+    /*background-color: rgb(0, 71, 179);*/
+    /*box-shadow: 0px 2px 4px black;*/
+    box-shadow: 0px 3px 7px $shadowColor; 
+    /*height: 47px;*/
+}
+/*from cinema.css*/
+/*.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    position: static;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}     */
+.navbar li {
+    /*float: left;*/
+    /*float: none;*/
+}
+
+/*.navbar li a {*/
+.navbar li a, .labelLI {
+    display: block;
+    /*color: white;*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*.navbar li:not(.dropDown) a:hover:not(.active) {*/
+.navbar li a:hover:not(.active), .navbar .labelLI:hover {
+    /*background-color: #111;*/
+    background-color: rgba(0,0,0,0.3);
+    /*box-shadow: 0px 2px 4px black;*/
+    /*box-shadow:  0px 0px 3px 2px rgba(0,0,0,1);*/
+}
+
+.navbar .active {
+    /*background-color: #4CAF50;*/
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0px 2px 4px $shadowColor inset;
+}
+.navbar .nav-right {
+    /*float: right;*/
+    /*float: none;*/
+}
+.miniNavbar .nav-right {
+    float: right;
+}
+.miniNavbar li{
+    float: left;
+}
+.navbar.miniNavbar {
+    /*float: left;*/
+    /*display: inline-block;*/
+    /*display: block;*/
+    /*width: 20%;*/
+    /*padding: 0px;*/
+    margin:auto;
+    /*margin-bottom: 0px;*/
+    box-shadow: none;
+    /*box-shadow: 0px 2px 4px 10px black;*/
+}
+/*.navbar.miniNavbar .active {*/
+.navbar.miniNavbar .active, #AccountCheckBox:checked + li .labelLI {
+/*    background-color: #4CAF50;
+    background-color: rgba(255,255,255,0.2);*/
+    box-shadow: 0px 0px 6px 1px $shadowColor inset;
+    /*box-shadow: none;*/
+}
+
+@media (min-width: 400px){
+    .navbar:not(.miniNavbar) {
+    /*.navbar {*/
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 100;
+    }
+    /*.miniNavbar {*/
+/*    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 100;
+    }*/
+    .navbar .nav-right {
+        float: right;
+    }
+    .navbar li {
+        float: left;
+    }
+}
+/*.dropDownLi {
+}
+.dropDown {
+}
+.dropDown .dropDownAccount{
+    height: 47px;
+    transition: all 0.5s;
+}
+.dropDown .dropDownAccount a:not(:first-child){
+}
+.dropDown .dropDownAccount:hover a{
+    color:black;
+}
+.dropDown .dropDownAccount:hover {
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+.dropDown .dropDownAccount a {
+    float: right;
+}
+.dropDown .dropDownAccount .dropDownHidden {
+    clear: both;
+}
+.dropDown .dropDownAccount .dropDownHidden {
+    display: none;
+}
+.dropDown .dropDownAccount .dropDownHidden #closeButton {
+    display: none;
+}
+.dropDown .dropDownAccount:hover .dropDownHidden {
+    display: block;
+}
+.dropDown .dropDownAccount .dropDownHidden:target, .dropDown .dropDownAccount .dropDownHidden:target #closeButton {
+    display: block;
+    
+}*/
+#AccountCheckBox {
+    display:none;
+}
+#AccountCheckBox~ .hiddable a {
+    /*color: white;*/
+    color: rgba(0,0,0,0.5);
+}
+#AccountCheckBox ~ .hiddable{
+    display:none;
+}
+#AccountCheckBox:checked ~ .hiddable{
+    display:block;
+}

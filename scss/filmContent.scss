@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-janv.-2016, 1:35:21
+    Author     : queni
+*/
+@import "cinema.scss";
+.contentContainer {
+    margin: auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 4px 3px $shadowColor inset; 
+    padding:10px;
+    overflow: hidden;
+}
+.contentContainer img {
+    margin: auto;
+    /*max-width: 800px;*/
+    /*width: 200px;*/
+    width: 300px;
+    /*max-width: 300px;*/
+    float: left;
+    padding:10px;
+}
+/*.contentContainer .contentContainerInfo {
+    margin: auto;
+    max-width: 800px;
+    float: left;
+}*/
