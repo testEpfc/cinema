@@ -235,7 +235,8 @@ table.resultList, .navbar.miniNavbar, table.responsiveTable, .gridTable {
     text-align: center;
 /*    position : fixed;
     top: 52px;*/
-    box-shadow: 0 0 6px 3px black;
+    /*box-shadow: 0 0 6px 3px black;*/
+    box-shadow: none;
 }
 .masterH1 {
     color: white;

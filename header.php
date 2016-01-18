@@ -79,7 +79,7 @@ $j=0;
         </li>
         <?php } 
         elseif($_REQUEST['welcome'] == 2) {   ?>
-        <li class="goodFeedBack" style="box-shadow: none;">
+        <li class="goodFeedBack">
             Welcome back to Cinema, <?php echo $_REQUEST['username'] ?>
         </li>
         <?php }} ?>
