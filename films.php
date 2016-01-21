@@ -38,7 +38,14 @@ try {
     $porteMysql->query("INSERT INTO `$DBName`.`film` (`id`, `titre`, `annee`, `description`, `poster`) VALUES (NULL, \"$titre\", \"$date\", \"$description\", \"$poster\")");
     }
     
-    
+       
+}
+catch(PDOException $e)
+{
+//    echo $sql . "<br>" . $e->getMessage();
+    echo "catch 1 <br>" . $e->getMessage();
+}
+$porteMysql = null;
     
     
 //    $reponse = $porteMysql->query("SELECT * FROM `$tableName`");
@@ -54,14 +61,21 @@ try {
     //include "DBInfo.php";
 
 //    $porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
-    $isList = 0;
-    $isList = 2;
-    $isList = 1;
-    $isList = 2;
-    $isEmpty = 1;
-    $badSearch = 0;
-    $search = '';
-    $badSearchMessage = "<h3 class='error'>The film you are looking for is not in our database</h3>";
+$isList = 0;
+$isList = 2;
+$isList = 1;
+$isList = 2;
+$isEmpty = 1;
+$badSearch = 0;
+$search = '';
+$all = null;
+$badSearchMessage = "<h3 class='error'>The film you are looking for is not in our database</h3>";
+try {
+    //$porteMysql = new PDO('mysql:host=localhost;dbname='.$DBName.';charset=utf8', 'root', '');
+    $porteMysql = new PDO("mysql:host=$serverName;dbname=$DBName;charset=utf8", $userName, $password);
+    //$porteMysql = new PDO("mysql:host=$serverName", $userName, $password);
+    $porteMysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
     if(isset($_REQUEST['search']) && !empty($_REQUEST['search']))
     {
         $search = $_REQUEST['search'];
@@ -111,7 +125,8 @@ try {
 }
 catch(PDOException $e)
 {
-    echo $sql . "<br>" . $e->getMessage();
+//    echo $sql . "<br>" . $e->getMessage();
+    echo "catch 1 <br>" . $e->getMessage();
 }
 
 $porteMysql = null;
