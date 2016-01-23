@@ -22,6 +22,7 @@ if(isset($_REQUEST['username']) && isset($_REQUEST['password']) && isset($_REQUE
     $isEmpty = 0;
 
 $porteMysql->query("INSERT INTO `$DBName`.`$logTableName` (`id`, `nickname`, `password`, `email`) VALUES (NULL,\"$username\",\"$password\",\"$email\")");
+$_SESSION['userID'] = $username;
 }
 ?>
 
